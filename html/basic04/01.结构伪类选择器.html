@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <style>
+        /* 在这里 不加ul也可以  */
+        /* 匹配父元素中第一个子元素 */
+        ul li:first-child {
+            color: red;
+        }
+        /* 父元素最后一个子元素 */
+        ul li:last-child {
+            color: blue;
+        }
+        
+        /* 第三个 */
+        ul li:nth-child(3) {
+            color: pink;
+        }
+        /* 倒数第三个 */
+        ul li:nth-last-child(3){
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+   <ul>
+    <li>第1个li</li>
+    <li>第2个li</li>
+    <li>第3个li</li>
+    <li>第4个li</li>
+    <li>第5个li</li>
+    <li>第6个li</li>
+    <li>第7个li</li>
+    <li>第8个li</li>
+    <li>第9个li</li>
+   </ul>
+</body>
+</html>

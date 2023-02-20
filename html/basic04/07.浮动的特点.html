@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <style>
+/* 浮动的元素会脱离标准流 在标准流中不在占用位置
+会覆盖元素
+浮动找浮动
+
+浮动无法水平居中 
+*/
+        div {
+            float: left;
+        }
+
+        .d1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .d2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .d3 {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+</body>
+
+</html>
