@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器  会选择父标签里所有相关的标签*/
+        /* div p {
+            color: red;
+        } */
+        /* 子代选择器 只会选择第二级标签 */
+        div>p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>p</p>
+    <div>
+        <p>div p</p>
+        <span>
+            <p>div span p</p>
+        </span>
+    </div>
+</body>
+
+</html>
