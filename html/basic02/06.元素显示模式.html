@@ -6,14 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            /* display: inline-block; */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
 </head>
 
 <body>
     <!--
-        1. 块级元素 独占一行 可设置宽高 代表div
-        2. 行内元素 一行多个 高宽由内容决定 不可设置 代表 span
-        3. 行内块 一行显示多个 可设置宽高  代表 input button
+        1. 块级元素(block) 独占一行 可设置宽高 代表div
+        2. 行内元素(inline) 一行多个 高宽由内容决定 不可设置 代表 span
+        3. 行内块(inline-block) 一行显示多个 可设置宽高  代表 input button
+        转换由css的属性display决定
+        
+        注意点
+        p标签内不要嵌套块级元素
+        a标签内不要嵌套a标签 a标签内可以嵌套其他标签
       -->
+      <div></div>
+      <div></div>
 </body>
 
 </html>
