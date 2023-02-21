@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner {
+            position: relative;
+            width: 500px;
+            height: 280px;
+            margin: 0 auto;
+        }
+        .banner img {
+            width: 500px;
+        }
+        
+        .mask {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50px;
+            /* 绝对定位的盒子 显示具备行内块的特点 要指定宽度 高度 */
+            /* 如果子级与父级相同 那么可以设置 100% */
+            width: 100%;
+            background-color: rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="../img/2.jpg" alt="">
+        <div class="mask"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+/* 版心居中 */
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* 头部 */
+.header {
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+    margin: 30px auto;
+    /*可能会覆盖版心*/
+    height: 42px;
+}
+
+h1 {
+    float: left;
+}
+
+/* 导航 */
+.nav {
+    float: left;
+    margin-left: 70px;
+    height: 42px;
+}
+
+.nav li {
+    float: left;
+    margin-right: 26px;
+}
+
+/* 让a标签更大可点击 */
+.nav li a {
+    display: block;
+    /* border-bottom: 1px solid #00a4ff; */
+    padding: 0 9px;
+    line-height: 42px;
+    text-align: center;
+    color: #050505;
+    font-size: 18px;
+}
+
+.nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+.search {
+    float: left;
+    margin-left: 59px;
+    /*去掉li的内边距和右外计算*/
+    border: 1px solid #00a4ff;
+    width: 412px;
+    height: 40px;
+}
+
+.search input {
+    border: 0;
+    width: 360px;
+    height: 38px;
+
+}
+
+.search input::placeholder {
+    padding-left: 21px;
+    font-size: 14px;
+    color: #bfbfbf;
+    line-height: 38;
+}
+
+.search button {
+    float: right;
+    border: 0;
+    width: 50px;
+    height: 39px;
+    background: url(../images/btn.png) no-repeat;
+}
+
+.user {
+    /*  展示不给宽留给用户名  */
+    float: right;
+    margin-right: 35px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+}
+
+.user img {
+    /* 调节图片垂直对齐方式 */
+    vertical-align: middle;
+}
+
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner .wrapper {
+    height: 420px;
+    background: url(../images/banner2.png) no-repeat center center;
+}
+
+.banner .left {
+    float: left;
+    padding: 0 20px;
+    /* 感觉位置不对 自己加的 */
+    padding-top: 10px;
+    width: 190px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, .3);
+    /* 可继承类属性 */
+    line-height: 44px;
+}
+
+.banner .left span {
+    float: right;
+}
+
+.banner .left a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.banner .left li a:hover {
+    color: #00b4ff;
+}
+
+.banner .right {
+    float: right;
+    margin-top: 50px;
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.banner .right h3 {
+    height: 48px;
+    background-color: #9bceea;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+}
+
+.banner .right .content {
+    padding: 0 18px;
+}
+
+/* 这里浏览器会自动识别行高 所以在ui里量的padding比较大这里凭感觉调小 */
+.banner .right .content dl {
+    border-bottom: 2px solid #e5e5e5;
+    padding: 12px 0;
+}
+
+.banner .right .content dl .textleft {
+    font-weight: bold;
+    color: #4e4e4e;
+}
+
+
+.banner .right .content dl .textright {
+    color: #4e4e4e;
+    font-size: 14px;
+}
+
+.banner .right .content dl dd {
+    color: #4e4e4e;
+    font-size: 14px;
+}
+
+.banner .right .more {
+    display: block;
+    /* margin: 4px 14px 0; */
+    margin: 4px auto 0;
+    border: solid 1px #00a4ff;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    color: #00a4ff;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+/* 精品推荐 */
+.goods {
+    box-shadow: 0px 2px 3px 0px rgba(118, 118, 118, 0.2);
+    margin-top: 8px;
+    padding-left: 34px;
+    padding-right: 26px;
+    height: 60px;
+    background-color: #fff;
+    /* 这里行高属性可以让包括在其中的文字全部居中显示 */
+    line-height: 60px;
+}
+
+.goods h2 {
+    float: left;
+    padding-right: 32px;
+    color: #00a4ff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.goods li {
+    float: left;
+}
+
+.goods li a {
+    /* 给a标签添加边框默认是字体大小的边框 */
+    border-left: 1px solid #bfbfbf;
+    padding: 0 30px;
+    color: #000;
+}
+
+
+.goods>a {
+    float: right;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00a4ff;
+}
+
+/*  精品推荐课程*/
+
+.course {
+    margin-top: 37px;
+    /* 这个区域的内容是随着数据库的内容显示 不方便添加高度 */
+    /* height: 595px; */
+}
+
+.course .content li {
+    position: relative;
+}
+.course .content li .hot {
+    position: absolute;
+    right: -4px;
+    top: 4px;
+}
+
+.course .title {
+    height: 40px;
+}
+
+.course .title h2 {
+    float: left;
+    color: #494949;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.course .title a {
+    /* display: block; */
+    float: right;
+    margin-right: 30px;
+    font-size: 11px;
+    color: #a5a5a5;
+}
+
+.course .content li {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 228px;
+    height: 270px;
+}
+
+/* 尼玛 写错一个找半天 */
+.course .content li:nth-child(5n) {
+    margin-right: 0px;
+}
+
+.course .content li h3 {
+    margin: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+}
+
+
+.course .content li p {
+    /* 两个外边距的话不会叠加 就算和上面的元素一样20 最终也是20px */
+    margin: 20px;
+    font-size: 12px;
+    color: #999;
+}
+
+.course .content li span {
+    color: #ff7c2d;
+}
+
+.footer {
+    margin-top: 40px;
+    padding-top: 30px;
+    height: 417px;
+    background-color: #fff;
+}
+
+.footer .left {
+    float: left;
+}
+
+.footer .left p {
+    margin: 20px 0 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.footer .left a {
+    display: block;
+    border: 1px solid #00a4ff;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #00a4ff;
+}
+
+.footer .right {
+    float: right;
+}
+.footer .right dl{
+    float: right;
+    margin-left: 120px;
+}
+
+.footer .right dt{
+    font-weight: bold;
+    font-size: 17px;
+}
+.footer .right dd{
+    margin-top: 15px;
+}
+
+.footer .right dd a{
+    color:#000;
+}
