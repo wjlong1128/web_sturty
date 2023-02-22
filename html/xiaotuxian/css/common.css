@@ -1,0 +1,207 @@
+.wrapper {
+    margin: 0 auto;
+    width: 1240px;
+}
+
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.shortcut .wrapper {
+    height: 52px;
+}
+
+/* 这里让ul到最右边 不至于让li右浮动打乱li位置 */
+.shortcut ul {
+    float: right;
+}
+
+.shortcut li {
+    float: left;
+    line-height: 52px;
+}
+
+.shortcut a {
+    border-right: 1px solid #dcdcdc;
+    padding: 0 16px;
+    color: #dcdcdc;
+    font-size: 14px;
+}
+
+.shortcut li a span {
+    display: inline-block;
+    margin-right: 8px;
+    width: 11px;
+    height: 16px;
+    background: url(../images/sprites.png) no-repeat -160px -70px;
+    vertical-align: middle;
+}
+
+.shortcut li:last-child a {
+    border: 0;
+}
+
+.header {
+    margin: 30px auto;
+    height: 70px;
+    /* line-height: 70px; */
+}
+
+.header .logo {
+    float: left;
+    width: 207px;
+    height: 70px;
+    /* background-color: pink; */
+}
+
+/* logo搜索引擎优化 */
+.header .logo h1 {
+    width: 207px;
+    height: 70px;
+}
+
+.header .logo a {
+    display: block;
+    width: 207px;
+    height: 70px;
+    background: url(../images/logo.png) no-repeat;
+    background-size: contain;
+    font-size: 0;
+}
+
+.header .nav {
+    float: left;
+    margin-left: 40px;
+    /* 宽度根据内容撑开 */
+    height: 10px;
+}
+
+.header .nav li {
+    float: left;
+    margin-right: 48px;
+    line-height: 70px;
+}
+
+.header .nav li a {
+    padding-bottom: 7px;
+}
+
+.header .nav li a:hover {
+    border-bottom: 1px solid #27ba9b;
+    color: #27ba27;
+    font-weight: bold;
+}
+
+.header .search {
+    position: relative;
+    float: left;
+    margin-top: 24px;
+    margin-left: 34px;
+    /* 注意细节 */
+    border-bottom: 2px solid #e7e7e7;
+    width: 173px;
+    height: 30px;
+}
+
+.search input {
+    width: 172px;
+    /* 注意搜索框描边 */
+    height: 28px;
+}
+
+.search input::placeholder {
+    padding-left: 29px;
+}
+
+.search span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/sprites.png);
+    background-position: -79px -69px;
+}
+
+.header .car {
+    position: relative;
+    float: left;
+    margin-top: 28px;
+    margin-left: 15px;
+    width: 23px;
+    height: 23px;
+    background-image: url(../images/sprites.png);
+    background-position: -119px -69px;
+}
+
+.header .car span {
+    position: absolute;
+    border-radius:8px; 
+    top: -6px;
+    right: -13px;
+    width: 20px;
+    height: 15px;
+    background-color: red;
+    text-align: center;
+    line-height: 15px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.footer {
+    height: 342px;
+    background-color: #333;
+}
+
+.footer .wrapper {
+    width: 1393px;
+}
+
+.footer .top {
+    padding-top: 59px;
+    padding-left: 135px;
+    border-bottom: 2px solid #434343;
+    height: 175px;
+}
+
+.footer .top li {
+    float: left;
+    margin-right: 200px;
+    width: 195px;
+    height: 58px;
+    line-height: 58px;
+}
+.footer .top span {
+    font-size: 28px;
+    color: #fff;
+}
+.footer .top li::before{
+    display: inline-block;
+    content: '';
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    vertical-align: top;
+}
+
+.footer .top li:last-child {
+    margin-right: 0px;
+}
+
+.footer .bottom {
+    padding-top: 40px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.footer .bottom a {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .bottom p {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,275 @@
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    background-color: pink;
+}
+
+.aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.aside li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.aside li a {
+    display: block;
+    padding-left: 32px;
+    padding-right: 15px;
+    /* width: 250px; */
+    height: 50px;
+    color: #fff;
+}
+
+.aside li a span {
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.aside li a:hover {
+    background-color: #27ba9b;
+}
+
+.aside li a::after {
+    /* display: inline-block; */
+    content: "";
+    float: right;
+    margin-top: 17px;
+    padding-right: 19px;
+    width: 6px;
+    height: 11px;
+    background: url(../images/sprites.png);
+    background-position: -70px -110px;
+}
+
+.banner .prev,
+.banner .next {
+    position: absolute;
+    top: 228px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(../images/sprites.png);
+}
+
+.banner .prev {
+    left: 260px;
+    background-position: 14px -60px;
+}
+
+.banner .next {
+    right: 10px;
+    background-position: -22px -60px;
+}
+
+.banner ol {
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+}
+
+.banner ol li {
+    float: left;
+    margin-right: 24px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.banner ol current {
+    background-color: #fff;
+}
+
+/* .goods 不给高度 让内容自己撑大盒子 浮动溢出 就清除*/
+.goods .hd {
+    height: 114px;
+    line-height: 114px;
+}
+
+.goods .hd h2 {
+    float: left;
+    /* 注意点 之前没有设置高度 挤出下面的li了 */
+    height: 114px;
+    font-size: 29px;
+    font-weight: normal;
+}
+
+
+.goods .hd h2 span {
+    margin-left: 32px;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .hd a,
+.source .hd .more{
+    float: right;
+    color: #999;
+}
+
+.goods .hd a::after,
+.source .hd .more::after {
+    display: inline-block;
+    content: "";
+    margin-left: 13px;
+    width: 7px;
+    height: 13px;
+    background: url(../images/sprites.png) no-repeat;
+    background-position: 0 -110px;
+}
+
+.goods .hb li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+
+.goods .hb li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.goods .hb li img {
+    width: 304px;
+}
+
+.goods .hb li h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.goods .hb li div {
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+
+.goods .hb li div span {
+    font-size: 23px;
+}
+
+.goods .hb li .new {
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    border: 1px solid #27ba9b;
+    border-radius: 2px;
+    width: 28px;
+    height: 51px;
+    font-size: 18px;
+    font-weight: 400;
+    /* 自定义让两行字间隔小一些 */
+    line-height: 24px;
+    color: #27ba9b;
+}
+
+
+.source {
+    margin-top: 42px;
+    background: #fff;
+}
+
+.source .hd {
+    height: 94px;
+    /* background-color: pink; */
+    line-height: 94px;
+}
+
+.source .hd h2 {
+    float: left;
+    height: 94px;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.source .hd ul{
+    float: right;
+    margin-right: 65px;
+}
+
+.source .hd li {
+    float: left;
+}
+
+.source .hd li a {
+    /* display: block; */
+    padding: 2px 10px;
+    margin-right:6px;
+}
+
+.source .hd li a:hover {
+    background-color: #27ba9b;
+    color: #fff;
+}
+
+.source .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px;
+}
+
+.source .bd .right {
+    float: left;
+    width: 1000px;
+    height: 610px;
+}
+
+.source .bd .right li {
+    float: left;
+    margin-left: 8px;
+    margin-bottom: 3px;
+    width: 242px;
+    height: 304px;
+}
+
+.source .bd .right img {
+    margin: 8px 29px;
+    width: 184px;
+    height: 184px;
+}
+
+.source .bd .right h3{
+    padding-left: 29px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.source .bd .right p {
+    padding-left: 29px;
+    text-indent: 1em;
+}
+
+
+.source .bd .right .pirc {
+    padding-left: 29px;
+    color: #9a2e1f;
+    font-size: 17px;
+} 
+
+.source .bd .right .pirc span {
+    font-size: 22px;
+}
+
+
+
+

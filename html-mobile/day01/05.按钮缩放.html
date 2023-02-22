@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+        margin: 0 auto;
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+
+        overflow: hidden;
+      }
+
+      div::after {
+        position: absolute;
+        /* left: 75px; */
+        /* top: 75px; */
+        left: 50%;
+        top: 50%;
+        /* transform: translate(-50%,-50%); */
+        margin-top: -25px;
+        margin-left: -25px;
+        border: 1px solid black;
+        border-radius: 50%;
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-color: rgb(184, 87, 87);
+
+        transition: all 1s;
+      }
+
+      div:hover::after {
+        transform: scale(5);
+        opacity: 0;
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <hr />
+  </body>
+</html>

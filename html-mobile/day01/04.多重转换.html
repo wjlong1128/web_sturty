@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .f {
+        margin: 200px auto;
+        border: 2px solid black;
+        height: 202px;
+        width: 600px;
+      }
+
+      .s {
+        width: 200px;
+        border-radius: 50%;
+        background-color: skyblue;
+        transition: all 2s;
+        overflow: hidden;
+      }
+
+      .f:hover .s {
+        transform: translate(200%) rotate(360deg);
+      }
+
+      .s div {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        box-sizing: border-box;
+        border: 1px pink solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="f">
+      <div class="s">
+        <div></div>
+
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
