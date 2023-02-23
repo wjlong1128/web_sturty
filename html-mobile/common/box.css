@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.center {
+    margin: 20px auto;
+}
+.pbox {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
+
+.sbox {
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+}

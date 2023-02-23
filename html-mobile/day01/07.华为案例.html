@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../common/box.css" />
+    <style>
+        .box {
+            width: 330px;
+            height: 230px;
+            overflow: hidden;
+        }
+        .box img {
+            width: 330px;
+            height: 230px;
+            transition: all .5s;
+        }
+
+        .box li {
+            position: relative;
+        }
+        
+        a {
+            /* display: inline-block; */
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        .txt {
+            position: absolute;
+            left: 0;
+            top: 135px;
+            padding: 25px 30px;
+            width: 270px;
+            height: 116px;
+            transition: all .5s;
+        }
+
+        .txt h4 {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .txt h5{
+            font-size: 19px;
+        }
+        .txt span{
+            margin-top: 15px;
+            font-size: 12px;
+        }
+
+        .box li a::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-image: linear-gradient(
+                transparent,
+                rgba(0,0,0,.6)
+            );
+            transition: all .5s ;
+            opacity: 0;
+            z-index: 1;
+        }
+        
+        .box li a:hover::after {
+            opacity: 1;
+        }
+
+        .box li a:hover .txt{
+            transform: translateY(-10%);
+        }
+        
+        .box li a:hover  img {
+            transform: scale(1.2);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <li><a href="#">
+            <div class="pic">
+                <img src="../../images/huawei.jpg" alt="">
+            </div>     
+            <div class="txt">
+                <h4>前沿探索</h4>
+                <h5>憧憬6G，共同定义6G</h5>
+                <p> 《6G无线通信新征程》序言 </p>
+                <p>
+                    <span>了解更多</span>
+                    <i class="iconfont icon-ditu"></i>
+                </p>
+            </div>
+        </a></li>
+      </ul>
+    </div>
+  </body>
+</html>

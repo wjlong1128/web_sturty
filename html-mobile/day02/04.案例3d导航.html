@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: #fff;
+      }
+      .navs {
+        margin: 200px auto;
+        width: 300px;
+        height: 40px;
+        margin: 50px auto;
+      }
+
+      .navs li {
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        transition: all 0.5s;
+        /* 1 将父盒子转换为3d显示模式 */
+        transform-style: preserve-3d;
+      }
+
+      .navs a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+
+      .navs li a:first-child {
+        /*2 将盒子躺平并上升为立体顶部  */
+        transform: rotateX(-90deg) translateZ(20px);
+        background-color: orange;
+      }
+
+      .navs li a:last-child {
+        background-color: green;
+        /* 将第二个盒子往前挪 边对边 */
+        transform: translateZ(20px);
+      }
+      
+
+      .navs li:hover {
+          transform: rotateX(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navs">
+      <ul>
+        <li>
+          <a href="#">Index</a>
+          <a href="#">首页</a>
+        </li>
+        <li>
+          <a href="#">Reigster</a>
+          <a href="#">注册</a>
+        </li>
+        <li>
+          <a href="#">Login</a>
+          <a href="#">登录</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

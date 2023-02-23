@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        display: flex;
+        height: 300px;
+        border: 1px solid black;
+      }
+
+      .son {
+        flex: 2;
+      }
+/* 注意这里并未指定子盒子的宽和高 所占用的宽是flex属性分配 宽=(所有flex)/自己所占用的flex */
+      .son:nth-child(1) {
+        background-color: pink;
+      }
+      .son:nth-child(2) {
+        background-color: #111;
+      }
+      .son:nth-child(3) {
+        flex: 4;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="son"></div>
+      <div class="son"></div>
+      <div class="son"></div>
+    </div>
+  </body>
+</html>

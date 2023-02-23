@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes big{
+           from {
+            width: 200px;
+            height: 200px;
+           } 
+           to {
+            width: 600px;
+            height: 600px; 
+           }
+        }
+        
+        @keyframes change{
+           0%{
+            width: 200px;
+            height: 200px;
+           } 
+           50% {
+            width: 500px;
+            height: 300px;
+           }
+           100% {
+            width: 800px;
+            height: 500px;
+           }
+        }
+       div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* animation: big 2s; */
+        /* animation: 动画名称 时长 速度曲线(加速还是匀速) 延迟时间 重复次数 方向 执行完毕状态
+            不分顺序 前两个必须写 
+        */
+        /* infinite alternate 无线循环 和动画反方向执行一次  在一起就是无限循环 正反各一次
+           如果添加结束状态这两个得去掉 
+            结束状态关键字 backwards 默认值 最初   forwards 动画结束时的状态
+         */
+         /* 默认速度曲线为补间动画 可以更改为逐帧动画 steps(帧数) */
+        animation: change 5s  infinite alternate;
+    
+       } 
+    </style>
+</head>
+<body>
+   <div></div> 
+</body>
+</html>

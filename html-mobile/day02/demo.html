@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div {
+            width: 200px;
+            height: 200px;
+            transition:all .5s;
+        }
+        
+        .cube {
+            position: relative;
+            margin: 100px auto;
+            /* 远虚近实效果添加 */
+            /* perspective: 1200px;  */
+            /* 空间3d效果添加 */
+            transform-style: preserve-3d;
+        }
+        
+        .cube div {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .front {
+            background-color: pink;
+        }
+        
+        .back {
+            background-color: skyblue;
+            /* 沿着自身x旋转90度之后为躺着 所处位置高度为自身一半  想上移动自身一半的高度*/
+            transform:rotateX(90deg) translateZ(100px);
+        }
+        
+        .cube:hover {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+   <div class="cube">
+    <div class="front"></div>
+    <div class="back"></div>
+   </div> 
+</body>
+</html>

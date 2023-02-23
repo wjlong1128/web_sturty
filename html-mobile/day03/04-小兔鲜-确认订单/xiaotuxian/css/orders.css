@@ -1,0 +1,107 @@
+body {
+  background-color: #f7f7f8;
+}
+
+/* 公共样式 */
+.red {
+  color: #cf4444;
+}
+
+.pannel {
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.main {
+  /* 这个80px来自底部导航栏不能压住内容 */
+  padding: 12px 11px 80px 11px;
+}
+
+.main .user_msg {
+  display: flex;
+  align-items: center;
+  padding: 15px 0 14px 11px;
+}
+
+.main .location {
+  margin-right: 11px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-image: linear-gradient(#64bba2, #64bca3);
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+
+.main .user_info {
+  flex: 1;
+}
+.main .user_msg .top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.main .user_info .name {
+    font-weight: normal;
+  font-size: 15px;
+}
+
+.main .user_info .phone {
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+
+
+/* flex a标签能够直接添加宽高？ */
+.main .more {
+  width: 44px;
+  height: 44px;
+  color: #333;
+  text-align: center;
+  line-height: 44px;
+}
+
+.pay {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  /* 这个属性是给父亲添加 */
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 11px;
+  width: 100%;
+  border-top: 1px solid #ededed;
+  height: 80px;
+}
+
+.main .user_info .bottom {
+    font-size: 12px;
+}
+
+
+.pay .left {
+  font-size: 12px;
+}
+
+.pay .left span {
+  color: #cf4444;
+}
+
+.pay .left span i {
+  font-size: 20px;
+}
+.pay .right a {
+  display: block;
+  border-radius: 3px;
+  width: 90px;
+  height: 35px;
+  background-image: linear-gradient(#68bea6, #6dc0a9);
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+}

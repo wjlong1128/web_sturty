@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        
+        /* .body {
+            perspective: 1200px;
+        } */
+        
+        .cube {
+            position: relative;
+            margin: 20px auto;
+            background-color: pink;
+            transition: all 2s;
+            /* 给父级添加3d效果 让子盒子处于空间状态下 */
+            transform-style: preserve-3d;
+        }
+        
+        .cube div {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .front {
+            /* 将此盒子像面前拉开距离 但是看不到 */
+            transform: translateZ(200px);
+            background-color: green;
+        }
+        
+        .back {
+            background-color: orange; 
+        }
+        /* 需要父盒子旋转 */
+        .cube:hover {
+            transform: rotateY(180deg);
+        }
+
+    </style>
+</head>
+<body>
+   <div class="cube">
+    <div class="front"></div>
+    <div class="back"></div>
+   </div> 
+</body>
+</html>
