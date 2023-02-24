@@ -1,0 +1,122 @@
+.xtx_body {
+  /* 整个头部到底部的边距 */
+  padding-top: 29px;
+  padding-bottom: 85px;
+  background-color: #f6f6f6;
+}
+
+.xtx_body .wapper {
+  display: flex;
+}
+
+/* 左边导航栏 */
+.xtx_body .aside {
+  margin-right: 17px;
+  width: 227px;
+}
+
+.xtx_body .main {
+  flex: 1;
+}
+
+/* 用户信息概览 */
+.overview {
+  display: flex;
+  margin-bottom: 18px;
+  padding: 20px 0;
+  height: 132px;
+  background-color: #fff;
+}
+
+.overview:first-child {
+  border-right: 1px solid #f4f4f4;
+}
+
+.overview div {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.overview div a {
+  flex: 1;
+}
+
+.overview div a img {
+  margin-bottom: 10px;
+  width: 25px;
+  height: 23px;
+}
+
+.overview div:first-child a:last-child img {
+  width: 18px;
+  height: 25px;
+}
+
+.overview div a span {
+  font-size: 25px;
+  color: #e05e30;
+}
+
+.overview div a p {
+  font-size: 16px;
+}
+
+/* 公共样式 */
+.pannel {
+  margin-bottom: 20px;
+  padding: 28px 10px;
+  background-color: #fff;
+}
+
+.pannel .pannel_title {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  line-height: 45px;
+  vertical-align: middle;
+}
+
+.pannel .pannel_title h4 {
+  color: #333;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.pannel .pannel_title a {
+    color: #999;
+    font-size: 16px;
+}
+
+.orders .content li {
+    display: flex;
+    margin-top: -1px;
+    border: 1px solid #f4f4f4;
+    height: 137px;
+    margin-bottom: 20px;
+}
+.orders .content li:last-child {
+    margin-bottom: 0;
+}
+
+.orders li .gooes {
+    flex: 1;
+}
+
+.orders .status {
+    width: 120px;
+}
+
+.order .pay {
+    width: 200px;
+    border-right: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+}
+
+.order .action {
+    width: 180px;
+}
+
