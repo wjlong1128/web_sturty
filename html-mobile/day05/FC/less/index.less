@@ -1,0 +1,116 @@
+// out:../css/
+@import "./base.less";
+@import "./normalize.less";
+
+// 根据屏幕宽度的 1/10 适配之后 在用js适配
+@rootSize: 37.5rem; rem
+// @rootSize: 3.75vw; // vw 视口的宽度 比例   
+// 这个3.75是所测试设备的1个vw   ?vw = (当前所量尺寸)/(设备宽度) * 100
+body {
+  background-color: #f0f0f0;
+}
+
+.main {
+  padding-bottom: (49 / @rootSize);
+  //   防止图片溢出
+  .banner {
+    height: (160 / @rootSize);
+  }
+
+  .title {
+    padding-left: (15 / @rootSize);
+    height: (40 / @rootSize);
+    line-height: (40 / @rootSize);
+    h4 {
+      color: #3c3c3c;
+      font-size: (14 / @rootSize);
+      //   font-weight: 400;
+    }
+  }
+
+  .item {
+    margin-bottom: (10 / @rootSize);
+    .pic {
+      position: relative;
+      height: (160 / @rootSize);
+      i {
+        position: absolute;
+        top: (15 / @rootSize);
+        right: (18 / @rootSize);
+        color: #fff;
+        font-size: (24 / @rootSize);
+      }
+      .action {
+        position: absolute;
+        top: (-4 / @rootSize);
+        left: (15 / @rootSize);
+        width: (66 / @rootSize);
+        height: (29 / @rootSize);
+        background-image: url(../images/status_active.png);
+        background-size: contain;
+        color: #fff;
+        font-size: (12 / @rootSize);
+        text-align: center;
+        line-height: (25 / @rootSize);
+      }
+    }
+    .txt {
+      padding: (8 / @rootSize) (19 / @rootSize) (16 / @rootSize)
+        (15 / @rootSize);
+      background-color: #fff;
+      font-size: (15 / @rootSize);
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: (15 / @rootSize);
+        h5 {
+          align-self: center;
+          // 折行
+          width: (290 / @rootSize);
+          color: #3c3c3c;
+          font-weight: 400;
+          font-size: (15 / @rootSize);
+        }
+
+        p {
+          color: #fe4269;
+          font-size: (15 / @rootSize);
+        }
+      }
+
+      .bottom {
+        display: flex;
+        p {
+          font-size: (11 / @rootSize);
+          color: #b4b4b4;
+        }
+        .left {
+          margin-right: (15 / @rootSize);
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  display: flex;
+  //   justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: (49 / @rootSize);
+  background: #feca49;
+
+  a {
+    font-size: (11 / @rootSize);
+    text-align: center;
+    color: #f0f0f0;
+    .iconfont {
+      font-size: (24 / @rootSize);
+    }
+  }
+}

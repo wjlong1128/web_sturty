@@ -1,0 +1,107 @@
+//out: ../css/index.css
+@import "./base";
+
+@vw: 3.75vw;
+@bcolor: #fb7299;
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  // 固定定位需要宽度
+  width: 100vw;
+  height: (84.07 / @vw);
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: (18.016 / @vw);
+    padding-right: (12.011 / @vw);
+    height: (44.03 / @vw);
+
+    .left {
+      h1 {
+        font-weight: 400;
+        font-size: 0;
+        .iconfont {
+          color: @bcolor;
+          font-size: (28.0249 / @vw);
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      .iconfont {
+        color: #ccc;
+        font-size: (22.5 / @vw);
+      }
+
+      .login {
+        margin-left: (24 / @vw);
+        margin-right: (24 / @vw);
+        width: (24 / @vw);
+        height: (24 / @vw);
+      }
+      .download {
+        width: (72 / @vw);
+        height: (24 / @vw);
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    height: (40.03 / @vw);
+    border-bottom: 1px solid #eee;
+
+    .more {
+      a {
+        display: block;
+        width: (40 / @vw);
+        height: (40 / @vw);
+        line-height: (40 / @vw);
+        text-align: center;
+        // 不要忘了权重 这里类继承选择器是权重最低的 不如类选择器
+        .iconfont {
+          font-size: (22 / @vw);
+        }
+      }
+    }
+
+    .tab {
+      ul {
+        display: flex;
+        li {
+          // 防止a标签的底部过长
+          padding: 0 (16 / @vw);
+          a {
+            display: block;
+            height: (38 / @vw);
+            font-size: (14 / @vw);
+            line-height: (38 / @vw);
+            &.current {
+              color: @bcolor;
+              border-bottom: 2px solid @bcolor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.video_content {
+  padding: (84 / @vw) 0 (5 / @vw);
+  .video_list {
+    display: flex;
+    a {
+      width: 50%;
+      padding: (8 / @vw) (5 / @vw);
+      background-color: pink;
+    }
+  }
+}
