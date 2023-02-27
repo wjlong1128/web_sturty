@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" />
+    <script>
+      let array = [1, 2, "sd"];
+      console.log(array);
+      var input = document.querySelector("input");
+      input.onchange = function () {
+        let file = new FileReader();
+        file.readAsText(this.files[0]);
+        file.onload = function () {
+          document.querySelector("body").innerHTML = this.result;
+        };
+      };
+    </script>
+  </body>
+</html>

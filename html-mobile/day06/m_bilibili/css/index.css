@@ -33,6 +33,8 @@ ul {
   top: 0;
   width: 100vw;
   height: 22.41866667vw;
+  background-color: #fff;
+  z-index: 1;
 }
 .header .top {
   display: flex;
@@ -47,7 +49,7 @@ ul {
   font-size: 0;
 }
 .header .top .left h1 .iconfont {
-  color: #fb7299;
+  color: #19de3a;
   font-size: 7.47330667vw;
 }
 .header .top .right {
@@ -97,17 +99,40 @@ ul {
   line-height: 10.13333333vw;
 }
 .header .bottom .tab ul li a.current {
-  color: #fb7299;
-  border-bottom: 2px solid #fb7299;
+  color: #19de3a;
+  border-bottom: 2px solid #19de3a;
 }
 .video_content {
   padding: 22.4vw 0 1.33333333vw;
 }
 .video_content .video_list {
   display: flex;
+  flex-wrap: wrap;
 }
 .video_content .video_list a {
   width: 50%;
   padding: 2.13333333vw 1.33333333vw;
-  background-color: pink;
+  font-size: 3.2vmin;
+}
+.video_content .video_list a .txt {
+  margin-top: 1.33333333vw;
+}
+.video_content .video_list a .pic {
+  position: relative;
+}
+.video_content .video_list a .pic .count {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  padding: 2.13333333vw;
+  width: 100%;
+}
+.video_content .video_list a .pic .count p {
+  color: #fff;
+  font-size: 3.2vw;
+}
+.video_content .video_list a .pic .count p i {
+  vertical-align: bottom;
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        height: 40px;
+        width: 100%;
+        background-color: #2e2828;
+      }
+
+      .wrapper {
+        margin: 0 auto;
+        width: 1200px;
+      }
+
+      header li {
+        list-style: none;
+        width: 80px;
+        height: 40px;
+        background-color: pink;
+      }
+
+      h2 {
+        /* display: inline-block; */
+        color: #fff;
+      }
+
+      .s {
+        position: relative;
+      }
+      ul {
+          display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+      }
+      .s:hover ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="s">
+          <h2>菜单</h2>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div>
+        fasdljfaslkfjskl
+    </div>
+
+    <script>
+        let h2 = document.getElementsByTagName('h2')
+        h2.addEventListener('click',()=>{
+            console.log('hello');
+        })
+    </script>
+  </body>
+</html>
