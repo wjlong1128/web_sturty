@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--利用事件冒泡减少操作dom  -->
+    <ul>
+      <li>我需要变化！！！</li>
+      <li>我需要变化！！！</li>
+      <li>我需要变化！！！</li>
+      <li>我需要变化！！！</li>
+      <li>我需要变化！！！</li>
+    </ul>
+  </body>
+  <script>
+    let ul = document.querySelector('ul')
+    ul.addEventListener("click", (e) => {
+        e.target.style.backgroundColor = 'pink'
+    });
+  </script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let flag = true
+        let p = new Promise((resolve, reject) => {
+            if (flag) {
+                resolve('isOK')
+            } else {
+                reject('isError')
+            }
+        });
+        // then 接受两个函数参数  第一个为履行成功执行的 第二个是拒绝才执行的
+        // catch 是then(null,fairCallbck()) 的形式
+        p.then((v) => {
+            console.log(v);
+        })
+        .catch(v=>{
+           console.log(v); 
+           return v
+        }).then((v)=>{
+            console.log('前面失败 ',v);
+        })
+        console.log(p);
+        // console.log(p);
+    </script>
+</body>
+
+</html>

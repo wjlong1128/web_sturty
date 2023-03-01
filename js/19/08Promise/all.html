@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let flag = true
+        let ps = Promise.all([
+            new Promise((resolve, reject) => {
+                if (false) {
+                    resolve('IS OK')
+                } else {
+                    reject('IS Error')
+                }
+            }),
+
+            new Promise((resolve, reject) => {
+                if (flag) {
+                    resolve('IS OK')
+                } else {
+                    reject('IS Error')
+                }
+            }), new Promise((resolve, reject) => {
+                if (flag) {
+                    setTimeout(()=>{
+                        resolve('IS OK')
+                    },1000)
+                } else {
+                    reject('IS Error')
+                }
+            })
+        ])
+        console.log(ps);
+        ps.then(values=>{
+            console.log(values);
+        }).catch(err=>{
+            console.log('err',err);
+        })
+        console.log(ps);
+        
+        setTimeout(()=>{
+            console.log(ps);
+        },2000)
+    </script>
+</body>
+
+</html>

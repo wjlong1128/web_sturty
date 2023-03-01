@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // 两个定时器都属于window对象
+    let timeoutId = setTimeout(()=>{
+        console.log('定时器执行');
+    })
+    
+    // 停止定时器
+    clearTimeout(timeoutId)
+   </script> 
+</body>
+</html>

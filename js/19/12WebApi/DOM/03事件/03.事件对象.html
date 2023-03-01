@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+        <!-- 如果此时点击li target输出 li this输出ul -->
+      <li>123</li>
+      <li>223</li>
+      <li>323</li>
+    </ul>
+    <!--event  回调函数参数的默认参数 可以获取鼠标以及键盘事件的信息   -->
+    <script>
+      let ul = document.querySelector("ul");
+      // this指定绑定事件的对象 event.target返回的是触发事件的对象
+      // 也就是说this会向上查找对象 而target 指出真正触发事件的对象 也就冒泡的影响
+      ul.addEventListener("click", function (event) {
+        console.log("this=", this);
+        console.log("target=", event.target);
+      });
+    </script>
+  </body>
+</html>

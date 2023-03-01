@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // keyup 按键弹起
+    document.addEventListener('keyup',e => {
+        console.log('keyup',e.code) // keyCode 已经弃用
+    })
+    // keydown 按键按下 keyperss 不识别功能键但是区分字母大小写
+    // 执行顺序 down perss up
+    document.addEventListener('keydown',e => {
+        console.log('keydown')
+    })
+   </script> 
+</body>
+</html>

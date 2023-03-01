@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>点击我</button>
+    <button class="unBinding">点击解绑旁边按钮</button>
+    <script>
+      let button = document.querySelector("button");
+      // 被绑定的函数事件
+      let fn = function () {
+        console.log(this);
+      };
+      // 新标准
+      button.addEventListener("click", fn);
+      // 传统解绑 target.onclick = null
+      let unBinding = document.querySelector(".unBinding");
+      unBinding.addEventListener("click", function () {
+        button.removeEventListener("click", fn);
+      });
+    </script>
+  </body>
+</html>

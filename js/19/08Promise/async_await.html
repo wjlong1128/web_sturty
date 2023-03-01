@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let p = new Promise((resolve,reject)=>{
+    //   setTimeout(()=>{
+    //     resolve(" resolve OK ")
+    //   },5000)
+    // })
+
+    // p.then(value=>{
+    //   return value;
+    // })
+    // .then(value=>{
+    //   console.log(value);
+    // }).catch(err=>{
+    //   console.log('err.',err);
+    // })
+    // 也就是说 async 和 await 修饰的返回值是 Promise.resolve() 
+    async function get() {
+      try {
+        let p = await new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve('p OK')
+          }, 5000)
+          // reject('P error')
+        })
+        console.log(p);
+      } catch (error) {
+        console.log('error', error);
+      }
+      return 'ok'
+    }
+
+    try {
+      get().then(value => {
+        console.log('value', value);
+      })
+    } catch (error) {
+      console.log('err', error);
+    }
+    console.log('main...');
+  </script>
+</body>
+
+</html>

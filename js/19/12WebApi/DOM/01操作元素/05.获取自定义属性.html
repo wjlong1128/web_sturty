@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" wjl="wjl">点击我</div>
+   <script>
+    let div = document.getElementsByTagName('div')
+    div[0].onclick = function(){
+        this.style.width = '200px'
+        this.style.height= '200px'
+        this.style.backgroundColor= 'pink'
+        let wjl = this.getAttribute('wjl')
+        alert('您的自定义属性为'+wjl)
+        this.removeAttribute('wjl')
+    }
+   </script> 
+</body>
+</html>

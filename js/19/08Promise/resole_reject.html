@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let flag = false
+        let p = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (flag) {
+                    resolve("isOK")
+                } else {
+                    reject("isError")
+                }
+            }, 2000)
+        })
+
+        p.then(success => {
+            console.log(success);
+            return Promise.resolve('1号履行成功')
+        }, error => {
+            console.log(error);
+            return Promise.reject("1号履行失败")
+        })
+            .then(value => {
+                console.log(value);
+            }, error => {
+                console.log(error);
+            })
+
+        console.log(p);
+
+        console.log('我会继续执行');
+    </script>
+</body>
+
+</html>
