@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        margin: 0 auto;
+        width: 1200px;
+      }
+      .top {
+        position: fixed;
+        top: 300px;
+        right: 10px;
+        background-color: red;
+        display: none;
+      }
+      header {
+        height: 200px;
+        background-color: pink;
+      }
+
+      .banner {
+        margin-top: 10px;
+        height: 600px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">回到顶部</div>
+      <header></header>
+      <div class="banner"></div>
+      <div class="sourse"></div>
+    </div>
+
+    <script>
+      // 元素被减去头部 是element.scrollTop 页面被卷去头部 是window.pageYOffset
+      let header = document.querySelector("header");
+      let topr = document.querySelector(".top");
+      let banner = document.querySelector(".banner");
+      let h = banner.scrollTop;
+      document.addEventListener("scroll", function () {
+        //   这个值是代表banner 所有被滚动的高度
+        if (window.pageYOffset > h) {
+          topr.style.display = "block";
+        } else {
+          topr.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

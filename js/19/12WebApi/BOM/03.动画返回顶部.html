@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        margin: 0 auto;
+        width: 1200px;
+      }
+      .top {
+        position: fixed;
+        top: 300px;
+        right: 10px;
+        background-color: red;
+        display: none;
+      }
+      header {
+        height: 200px;
+        background-color: pink;
+      }
+
+      .banner {
+        margin-top: 10px;
+        height: 600px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">回到顶部</div>
+      <header></header>
+      <div class="banner"></div>
+      <div class="sourse"></div>
+    </div>
+
+    <script>
+      // 元素被减去头部 是element.scrollTop 页面被卷去头部 是window.pageYOffset
+      let header = document.querySelector("header");
+      let topr = document.querySelector(".top");
+      let banner = document.querySelector(".banner");
+      let h = banner.scrollTop;
+      document.addEventListener("scroll", function () {
+        //   这个值是代表banner 所有被滚动的高度
+        if (window.pageYOffset > h) {
+          topr.style.display = "block";
+        } else {
+          topr.style.display = "none";
+        }
+      });
+
+      function amimate(obj, target, s, callback) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(() => {
+          // 计算出动画的步长 往大了取值
+          let step = (target - window.pageYOffset) / 10;
+          // 有正走 也会有倒着走
+          step = step > 0 ? Math.ceil(step) : Math.floor(step);
+          if (window.pageYOffset == target) {
+            // 停止动画
+            clearInterval(obj.timer);
+            if (callback) {
+              callback();
+            }
+          }
+          // 缓动动画计算公式 （目标值 - 现在的位置） / 10 分为10步的话
+          // obj.style.left = obj.offsetLeft + step + "px";
+          window.scroll(0, window.pageYOffset + step);
+        }, s);
+      }
+      topr.addEventListener("click", (e) => {
+          amimate(window,0,0)
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      let div = document.querySelector("div");
+      // 鼠标按下 获得鼠标在盒子内的坐标
+      div.addEventListener("mousedown", function (e) {
+        let x = e.pageX - this.offsetLeft;
+        let y = e.pageY - this.offsetTop;
+        // 为什么是document？在页面的任何地方都可以移动鼠标
+        let move = function (e) {
+          // 鼠标移动的时候 将鼠标在页面中的坐标 减去 鼠标在盒子中的坐标
+          let divx = e.pageX - x + "px";
+          let divy = e.pageY - y + "px";
+          div.style.left = divx;
+          div.style.top = divy;
+        };
+        document.addEventListener("mousemove", move);
+        document.addEventListener("mouseup", () => {
+          document.removeEventListener("mousemove", move);
+        });
+      });
+    </script>
+  </body>
+</html>

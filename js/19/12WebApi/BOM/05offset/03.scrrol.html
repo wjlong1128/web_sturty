@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多这个内容很多</div>
+   <script>
+        let div = document.querySelector('div') 
+        // 不带单位 
+        console.log(div.clientHeight) // 不包含边框 获取css中设定的宽度
+        console.log(div.scrollHeight) // 不包含边框 // 动态获取盒子大小
+        // 滚动事件
+        div.addEventListener('scroll', e => {
+            console.log(div.scrollTop)// 滚动到上面多少单位
+        })
+   </script> 
+</body>
+</html>
