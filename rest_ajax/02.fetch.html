@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button name="btn">点击发送测试数据</button>
+    <div class="box"></div>
+    <script>
+      let btn = document.querySelector("button");
+      let box = document.querySelector(".box");
+
+      btn.addEventListener("click", () => {
+        // fetch 对原生ajax的Promise封装
+        fetch("https://api.github.com/search/users?q=aa")
+          .then((result) => {
+            if (result.status == 200) {
+              return result.json();
+            } else {
+              throw new Error("请求加载失败");
+            }
+          })
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((err) => {
+            console.log("err", err);
+          });
+      });
+    </script>
+  </body>
+</html>
