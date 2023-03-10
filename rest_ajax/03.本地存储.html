@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn1">存</button><br><br><button class="btn2">取</button>
+    <script>
+        let btn1 = document.querySelector('.btn1')
+        let btn2 = document.querySelector('.btn2')
+        btn1.onclick = function(){
+           // sessionStorage.setItem('name','zhangsan') 
+           localStorage.setItem('name','zhangsan') 
+        }
+        btn2.onclick = function(){
+           // console.log(sessionStorage.getItem('name')) 
+           console.log(localStorage.getItem('name')) 
+        }
+    </script>
+  </body>
+</html>

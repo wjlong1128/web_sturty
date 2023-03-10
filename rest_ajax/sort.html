@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="root"></div>
+
+    <script>
+      let root = document.getElementById("root");
+      function sort(array) {
+        if (!Array.isArray(array)) {
+          throw new Error(array + " not Array");
+        }
+        if (array.length == 0) {
+          return;
+        }
+        let n = array.length - 1;
+        while (n > 0) {
+          let last = 0;
+          for (let i = 0; i < n; ++i) {
+            if (array[i] > array[i + 1]) {
+              let temp = array[i];
+              array[i] = array[i + 1];
+              array[i + 1] = temp;
+              last = i;
+            }
+          }
+          n = last;
+        }
+        console.log(array);
+      }
+    </script>
+  </body>
+</html>

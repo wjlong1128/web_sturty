@@ -15,8 +15,14 @@
 
       btn.addEventListener("click", () => {
         // fetch 对原生ajax的Promise封装
-        fetch("https://api.github.com/search/users?q=aa")
+        fetch("https://api.github.com/search/users?q=aa", {
+          method: "GET",
+          headers: {
+            "Content-type": "application/json",
+          },
+        })
           .then((result) => {
+            // 注意 在fetch中 有返回值就会调用then也就是说 就算返回404照样会执行
             if (result.status == 200) {
               return result.json();
             } else {

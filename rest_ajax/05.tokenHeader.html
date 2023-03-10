@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let controller = new AbortController();
+      let token = localStorage.getItem("token");
+      fetch("http://localtion:80/", {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+        signal: controller.signal, // 收取终止请求
+      })
+        .then((result) => {})
+        .catch((err) => {});
+
+      // 如果3秒之后没有处理请求成功 那么就采取拒绝策略
+      setTimeout(() => {
+        controller.abort();
+      }, 3000); // 超时配置
+    </script>
+  </body>
+</html>
