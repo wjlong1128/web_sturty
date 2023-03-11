@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- stop 阻止事件冒泡  prevent 阻止默认事件  captrue 捕获阶段 -->
+      <button @click.once="showInfo">点击事件只触发一次</button>
+      <button @click="showInfo2($event,1)">点击事件</button>
+      <input type="text" @keyup.caps-lock="alert('锁定大小写')" />
+      <input type="text" @keyup.esc="alert('退出')" />
+    </div>
+    <script src="./vue2.js"></script>
+    <script>
+      new Vue({
+        el: "#root",
+        data() {
+          return {};
+        },
+        methods: {
+          // 默认为event 当视图需要传参想要获取event对象时 需要传递 $event
+          showInfo(event) {
+            alert(event);
+          },
+          showInfo2(event, number) {
+            alert(`${event.target} + ${number}`);
+          },
+          alert(value) {
+            alert(value);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
