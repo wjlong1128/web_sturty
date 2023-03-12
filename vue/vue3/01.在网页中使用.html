@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const component1 = {
+        data() {
+          return {
+            count: 0,
+          };
+        },
+        template: `<button @click="count++">{{count}}</button>`,
+      };
+
+      const Root = {
+        template: `<h1>Hello Vue {{message}} <component1/></h1>`,
+        data() {
+          return {
+            message: "这是来自未来的消息",
+          };
+        },
+        components: {component1},
+      };
+      const app = Vue.createApp(Root);
+
+      app.mount("#root");
+    </script>
+  </body>
+</html>
