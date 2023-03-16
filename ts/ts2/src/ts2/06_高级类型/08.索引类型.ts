@@ -13,8 +13,9 @@ const p: Person = {
 
 
 // 测试keyof  T extends keyof Person   说人话就是T 就是person的key
-
+// name / age  keyof T的结果为 T上已知的公共属性名的联合。
 let key: keyof Person = 'name'
+
 
 function get<K extends keyof Person>(key: K, p: Person): Person[K] {
     return p[key]

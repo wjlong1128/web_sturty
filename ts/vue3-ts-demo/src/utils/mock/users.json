@@ -1,0 +1,17 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "id": 1,
+      "nickName": "小明",
+      "userName": "小明",
+      "role": [{ "role": 1, "roleName": "管理员" }]
+    },
+    {
+      "id": 2,
+      "nickName": "小明",
+      "userName": "小明",
+      "role": [{ "role": 1, "roleName": "管理员" }]
+    }
+  ]
+}
