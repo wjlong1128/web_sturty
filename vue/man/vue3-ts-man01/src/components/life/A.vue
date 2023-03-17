@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUnmounted, onUpdated } from 'vue';
+import { getCurrentInstance,ref, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUnmounted, onUpdated } from 'vue';
 
 // 再setup中 beforeCreate created 是没有这两个生命周期函数的 用setup代替
 console.log('setup...');
@@ -22,6 +22,7 @@ onBeforeMount(() => {
 // 组件完成初始渲染并创建 DOM 节点后
 onMounted(() => {
     console.log('创建完成', div.value);
+    console.log(getCurrentInstance());
 })
 
 onBeforeUpdate(() => {
@@ -33,11 +34,11 @@ onUpdated(() => {
 })
 
 onBeforeUnmount(() => {
-    console.log('销毁组件之前');
+    console.log('销毁组件之前',div.value?.innerText);
 })
 
 onUnmounted(() => {
-    console.log('销毁组件之后');
+    console.log('销毁组件之后',div.value?.innerText);
 })
 
 
