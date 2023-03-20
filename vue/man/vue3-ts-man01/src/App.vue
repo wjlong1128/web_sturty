@@ -3,7 +3,6 @@
     <!-- 1. 介绍基础 <Index></Index> -->
     <!-- 2. 生命周期函数 <LifeIndex></LifeIndex> -->
     <!-- 3. 父子组件(参数传递，动态组件，插槽) <FASIndex></FASIndex> -->
-
     <!-- 4. 异步组件 -->
     <!-- <Suspense>
       <template #default>
@@ -33,12 +32,33 @@
 
     <!-- 9.兄弟组件传递消息 -->
     <!-- <BusIndex></BusIndex> -->
+    <!-- <MittIndex></MittIndex> -->
+
+    <!-- 10 TSX  -->
+    <!-- <WjlApp name="wangjianlong" @on-click="getItem"></WjlApp> -->
+
+    <!-- 11. v-model 组件双向数据流 -->
+    <!-- <VModelIndex></VModelIndex> -->
+
+    <!-- 12. directive 自定义指令 v-... -->
+    <!-- <DirectiveIndex></DirectiveIndex>     -->
+
+    <!-- 13. 自定义Hook -->
+    <!-- <HookIndex></HookIndex>  -->
+
+    <!-- 14.vue插件 将组件作为全局变量插件 -->
+    <!-- <PlugInIndex></PlugInIndex> -->
+
+    <!-- 15. 样式scoped穿透 -->
+    <!-- <CSSIndex></CSSIndex> -->
+    
+    <!-- 16. EventLoop -->
+    <NextTick></NextTick> 
   </div>
 </template>
 <script lang="ts" setup>
 // import LifeIndex from './components/life/LifeIndex.vue'
 // import FASIndex from './components/FAS/FASIndex.vue'
-
 // 添加异步组件
 // import { defineAsyncComponent } from 'vue';
 // const Async = defineAsyncComponent(() => import('./components/async/Async.vue'))
@@ -49,7 +69,18 @@
 // import TransitionsTwo from './components/transitions/TransitionsTwo.vue';
 // import TransitionThree from './components/transitions/TransitionThree.vue';
 // import ProvideIndex from './components/provide_inject/ProvideIndex.vue';
-import BusIndex from './components/Bus/BusIndex.vue';
+// import BusIndex from './components/Bus/BusIndex.vue';
+// import MittIndex from './components/mitt/MittIndex.vue';
+// import WjlApp from './App'
+// import VModelIndex from './components/vmodel/VModelIndex.vue';
+// import DirectiveIndex from './components/directive/DirectiveIndex.vue';
+// import HookIndex from './components/hookcust/HookCustIndex.vue';
+// import PlugInIndex from './components/plugin/PlugInIndex.vue';
+// import CSSIndex from './components/csss/CSSIndex.vue';
+import NextTick from './components/eventloop/NextTick.vue';
+const getItem = (value: any) => {
+  console.log('父组件收到', value);
+}
 </script>
 
 <style>
